@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بيتزا وفطائر دودي – المنيو</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Tajawal:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f0;--card:#fff;--tx:#2a1a14;--mut:#7a6a60;--pri:#c8201e;--pri2:#f5a623;--bd:#eadfd2;--ok:#1f9d55;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110e;--card:#241b17;--tx:#f5ece4;--mut:#b5a69b;--bd:#3a2d27}}
+:root[data-theme="dark"]{--bg:#17110e;--card:#241b17;--tx:#f5ece4;--mut:#b5a69b;--bd:#3a2d27}
+*{box-sizing:inherit}html{scroll-padding-top:120px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Cairo',Tahoma,Arial,sans-serif;padding-bottom:110px}
+header{background:linear-gradient(135deg,#a8110f,#e2461f);color:#fff;text-align:center;padding:22px 16px 18px;border-radius:0 0 28px 28px}
+header h1{margin:0;font-size:26px;font-weight:800}header p{margin:4px 0 0;font-size:13px;opacity:.92}
+header a{color:#fff;background:rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-size:13px;text-decoration:none;display:inline-block;margin-top:8px}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 12px 6px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+input,textarea{width:100%;font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:10px 0 4px;scrollbar-width:none}
+.tab{flex:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:20px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.tab.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main{padding:4px 12px}h2{font-size:19px;margin:18px 4px 8px;color:var(--pri)}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:12px 14px}
+.nm{font-weight:800;font-size:16px;display:flex;gap:8px;align-items:center}
+.new{background:var(--pri2);color:#2a1a14;font-size:11px;border-radius:8px;padding:1px 8px}
+.ds{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px;font-family:'Tajawal','Cairo',Tahoma,sans-serif}.ds em{font-style:normal;font-weight:300;font-size:12px;color:var(--mut);background:rgba(200,32,30,.09);border-radius:10px;padding:1px 9px}
+.v{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;padding-top:8px;border-top:1px dashed var(--bd)}
+.v span{color:var(--mut);font-size:14px}.v b{color:var(--tx);margin-inline-start:6px}
+.add{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.q{display:flex;align-items:center;gap:8px}.q button{width:30px;height:30px;border-radius:50%;border:1px solid var(--pri);background:var(--card);color:var(--pri);font-size:18px;line-height:1;cursor:pointer}
+.q button.p{background:var(--pri);color:#fff}.q i{min-width:18px;text-align:center;font-style:normal;font-weight:800}
+#fc{position:fixed;inset:auto 0 0 0;z-index:10;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))}
+#fc button{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--ok);color:#fff;border:0;border-radius:16px;padding:14px 18px;font:inherit;font-weight:800;font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.28);cursor:pointer}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:20;display:none}.ov.on{display:block}
+.sh{position:absolute;bottom:0;left:0;right:0;max-height:92%;overflow:auto;background:var(--bg);border-radius:24px 24px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));max-width:640px;margin:auto}
+.ci{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--bd)}.ci small{color:var(--mut);display:block}
+.seg{display:flex;gap:8px;margin:12px 0}.seg label{flex:1;text-align:center;border:1px solid var(--bd);background:var(--card);border-radius:12px;padding:9px;cursor:pointer}
+.seg input{display:none;width:auto}.seg label.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.f{display:grid;gap:8px}.send{margin-top:14px;width:100%;background:#25d366;color:#08331a;border:0;border-radius:14px;padding:14px;font:inherit;font-weight:800;font-size:17px;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:18px;margin-top:12px}.x{float:left;background:none;border:0;font-size:24px;color:var(--tx);cursor:pointer}
+.em{text-align:center;color:var(--mut);padding:30px}
+</style>
+</head>
+<body>
+<header><h1>🍕 بيتزا وفطائر دودي</h1><p>أجود أنواع الفطائر الشرقية والبيتزا الإيطالية</p><a>🧪 نسخة تجريبية – عرض فكرة</a></header>
+<div class="bar"><input id="s" type="search" placeholder="🔍 ابحث عن صنف..."><div class="tabs" id="tabs"></div></div>
+<main id="m"></main>
+<div id="fc" style="display:none"><button onclick="openCart()"><span>🛒 <span id="fn">0</span> صنف</span><span>عرض السلة</span><span><span id="ft">0</span> ج.م</span></button></div>
+<div class="ov" id="ov"><div class="sh">
+<button class="x" onclick="closeCart()" aria-label="إغلاق">×</button><h2 style="margin-top:0">🛒 سلة الطلب</h2>
+<div id="ci"></div><div class="tot"><span>الإجمالي</span><span><span id="ct">0</span> ج.م</span></div>
+<div class="seg" id="seg"><label class="on"><input type="radio" name="t" value="d" checked>🛵 توصيل للمنزل</label><label><input type="radio" name="t" value="i">🍽️ داخل المطعم</label></div>
+<div class="f" id="fd"><input id="nm" placeholder="الاسم"><input id="ph" type="tel" placeholder="رقم الموبايل"><textarea id="ad" rows="2" placeholder="العنوان بالتفصيل"></textarea></div>
+<div class="f" id="fi" style="display:none"><input id="tb" placeholder="رقم الطاولة" inputmode="numeric"></div>
+<div class="f" style="margin-top:8px"><textarea id="nt" rows="2" placeholder="ملاحظات الأكل (اختياري)"></textarea></div>
+<button class="send" onclick="send()">📲 إرسال الطلب عبر واتساب</button>
+</div></div>
+<script>
+const WA='';const DEMO=true; // عند الاعتماد: ضع رقم الواتساب (بصيغة 20xxxxxxxxxx) وغيّر DEMO إلى false
+const L3=['صغير','وسط','لارج'];
+// صف: الاسم|سعر لكل مقاس ("-" = غير متاح) ، النجمة = جديد
+const C=[
+{n:'🍕 بيتزا',l:L3,r:`مارجريتا|70|90|140
+كيري*|110|145|235
+سجق|110|160|260
+لحمة|110|160|260
+بسطرمة|115|170|270
+سوسيس|100|145|235
+مشروم|115|160|260
+ميكس لحوم|135|200|320
+مشكل جبن|100|160|245
+تشيكن|120|170|275
+كرنشي|130|180|285
+باربكيو|125|175|280
+رانش|130|190|285
+ميكس فراخ*|135|200|300
+بيروني|115|170|270
+سلامي|115|170|270
+رومي مدخن|115|165|265
+سوبر سوبريم|135|200|320
+تونة|130|170|275
+تونة كيري*|155|200|320
+سيط|165|230|340
+جمبري|170|185|270
+سي فود|205|320|460
+سوبر ميكس|135|195|275`},
+{n:'🥗 بيتزا دايت',l:L3,r:`مارجريتا|85|110|155
+مشروم|120|165|260
+فراخ|125|175|275
+جمبري|180|260|399
+تونة|135|180|275
+سي فود|200|310|445`},
+{n:'🥟 فطائر حادق',l:L3,r:`فطيرة جبنة|95|120|215
+فطيرة مشكل جبن|105|170|280
+فطيرة سجق|105|150|270
+فطيرة سجق كيري*|125|180|320
+فطيرة بسطرمة|110|155|290
+فطيرة سجق بسطرمة كيري*|140|195|340
+فطيرة لحمة|105|145|260
+فطيرة سوسيس|100|145|255
+فطيرة ميكس لحوم|130|180|320
+فطيرة مشروم|105|150|280
+فطيرة فراخ|110|160|280
+فطيرة بيروني|110|155|290
+فطيرة سلامي|110|155|290
+فطيرة ديك رومي|110|170|290
+فطيرة تونة|135|170|310
+فطيرة سيط|155|215|315
+فطيرة جمبري|200|285|445
+فطيرة سي فود|200|290|480
+إضافة جبنة مخصوص|20|30|45`},
+{n:'🍯 فطائر حلو',l:L3,r:`فطيرة سكر|30|55|110
+فطيرة كاستر|35|60|120
+فطيرة بغاشة|45|75|125
+فطيرة بغاشة كاستر|50|80|145
+فطيرة ملوكي|70|120|210
+فطيرة بقلاوة بندق|100|145|230
+فطيرة قشطة وعسل|110|175|285
+فطيرة بسبوسة وقشطة|110|175|285
+فطيرة قشطة|105|180|285
+فطيرة فياجرا|105|175|285
+فطيرة مكسرات|120|200|320
+فطيرة شيكولاتة بندق|115|180|285
+فطيرة أوريو مكس|105|185|285
+فطيرة مكس فواكه|95|170|280
+فطيرة بستاشيو*|220|300|400
+فطيرة فورسيزون*|-|310|420
+فطيرة حلو دودي|-|210|375`},
+{n:'🥧 وتش فطير',l:['صغير','كبير'],r:`وتش لحمة|105|135
+وتش سجق|105|135
+وتش سيط|105|170
+وتش بسطرمة|110|170
+وتش جمبري|105|170
+وتش فراخ|105|170
+وتش سي فود|105|190
+وتش مشكل جبن|105|170
+وتش مشروم|105|170
+وتش سوسيس|105|125`},
+{n:'🍮 أم علي',l:L3,r:`أم علي قشطة ومكسرات|80|125|180
+أم علي شيكولاتة|-|100|135
+أم علي لوتس|-|100|135`},
+{n:'🍟 البطاطس',l:['السعر'],r:`باكت بطاطس كبير|45
+طبق بطاطس بالجبنة|60`},
+{n:'🍝 مكرونات',l:L3,r:`مكرونة أربياتا|50|75|130
+مكرونة سجق|80|120|195
+مكرونة لحمة|75|110|180
+مكرونة سوسيس|70|100|170
+مكرونة بسطرمة|85|125|200
+مكرونة ميكس لحوم|95|145|215
+مكرونة تشيكن|95|145|210
+مكرونة فاهيتا|85|130|200
+مكرونة مشروم|85|130|200
+مكرونة نجرسكو|85|130|210
+مكرونة فراخ صوص أبيض|95|130|220
+مكرونة مشكل جبن|75|120|195
+مكرونة ديك رومي مدخن|90|140|215
+مكرونة مشروم صوص أبيض|90|135|210
+مكرونة تونة|85|130|190
+مكرونة سيط|160|220|310
+مكرونة جمبري|165|230|375
+مكرونة سي فود|170|250|400`},
+{n:'🌯 الكريب الحادق',l:['عادي','كونو'],r:`كريب موتزاريلا|75|95
+كريب رومي|85|115
+كريب مشكل لحوم|95|120
+كريب فراخ|85|110
+كريب بانيه كرسبي|95|120
+كريب مشكل جبن|100|120
+كريب سجق|95|115
+كريب استربس فراخ|95|120
+كريب مشروم|100|120
+كريب زنجر فراخ|100|120
+كريب لحمة|95|115
+كريب فاهيتا فراخ|100|120
+كريب ميكس فراخ|95|125
+كريب تونة|110|130
+كريب سوسيس|85|105
+كريب كابوريا|140|160
+كريب سيط|135|155
+كريب بسطرمة|105|125
+كريب جمبري|175|195
+كريب سي فود|175|220
+كريب بطاطس|90|110
+كريب شيدر*|85|105
+كريب كيري*|95|115
+كريب كفتة*|95|115
+كريب ميكس جبن وسي فود*|95|115
+كريب ميكس جبن ولحوم*|95|115
+كريب برجر لحمة*|95|115
+كريب برجر فراخ*|95|115`},
+{n:'🍫 الكريب الحلو',l:['السعر'],r:`كريب شيكولاتة|105
+كريب بوريو|110
+كريب شيكولاتة موز|110
+كريب شيكولاتة هوهوز|110
+كريب شيكولاتة لوتس|115
+كريب شيكولاتة بندق|120`},
+{n:'🥙 الحواوشي',l:['عادي','مخصوص'],r:`حواوشي سدق*|110|135
+حواوشي بسطرمة*|120|145
+حواوشي لحمة*|110|135`},
+{n:'➕ الإضافات',l:['صغير','وسط','لارج','كريب'],r:`إضافة جبن|35|50|70|30
+إضافة لحوم|35|50|85|30
+إضافة أسماك|80|110|170|90`}
+];
+const RAW={0:`مارجريتا=خضروات-رومي-موتزاريلا
+كيري=كيري-رومي-خضروات-موتزاريلا
+سجق=سجق-خضروات-موتزاريلا
+لحمة=مفروم-خضروات-موتزاريلا
+بسطرمة=بسطرمة-خضروات-موتزاريلا
+سوسيس=سوسيس-خضروات-موتزاريلا
+مشروم=مشروم-خضروات-موتزاريلا
+ميكس لحوم=مفروم-سجق-سوسيس-بسطرمة-خضروات-موتزاريلا
+مشكل جبن=كيري-رومي-شيدر-موتزاريلا
+تشيكن=فراخ-خضروات-موتزاريلا
+كرنشي=فراخ-خضروات-موتزاريلا
+باربكيو=فراخ-صوص باربكيو-خضروات-موتزاريلا
+رانش=فراخ-صوص رانش-خضروات-موتزاريلا
+ميكس فراخ=فراخ-خضروات-موتزاريلا
+بيروني=بيروني-خضروات-موتزاريلا
+سلامي=سلامي-بقري مدخن-خضروات-موتزاريلا
+رومي مدخن=ديك رومي مدخن-خضروات-موتزاريلا
+سوبر سوبريم=مشكل لحوم-خضروات-موتزاريلا
+تونة=تونة-خضروات-موتزاريلا
+تونة كيري=تونة-كيري-خضروات-موتزاريلا
+سيط=سيط-خضروات-موتزاريلا
+جمبري=جمبري-خضروات-موتزاريلا
+سي فود=جمبري-سيط-كابوريا-خضروات-موتزاريلا
+سوبر ميكس=فراخ-بسطرمة-مشروم-خضروات-موتزاريلا`,
+1:`مارجريتا=دقيق أسمر-زيت زيتون-موتزاريلا لايت-خضار-لبن خالي الدسم
+مشروم=دقيق أسمر-زيت زيتون-مشروم-موتزاريلا لايت-خضار-لبن خالي الدسم
+فراخ=دقيق أسمر-زيت زيتون-فراخ-موتزاريلا لايت-خضار-لبن خالي الدسم
+جمبري=دقيق أسمر-زيت زيتون-جمبري-موتزاريلا لايت-خضار-لبن خالي الدسم
+تونة=دقيق أسمر-زيت زيتون-تونة-موتزاريلا لايت-خضار-لبن خالي الدسم
+سي فود=مشروم-موتزاريلا لايت-جمبري-سيط-كابوريا-خضار`,
+2:`فطيرة جبنة=رومي-موتزاريلا-خضروات
+فطيرة مشكل جبن=شيدر-رومي-موتزاريلا-خضروات
+فطيرة سجق=سجق-موتزاريلا-خضروات
+فطيرة سجق كيري=سجق-كيري-موتزاريلا-خضروات
+فطيرة بسطرمة=بسطرمة-موتزاريلا-خضروات
+فطيرة سجق بسطرمة كيري=سجق-بسطرمة-كيري-موتزاريلا-خضروات
+فطيرة لحمة=مفروم-موتزاريلا-خضروات
+فطيرة سوسيس=سوسيس-موتزاريلا-خضروات
+فطيرة ميكس لحوم=سجق-سوسيس-بسطرمة-موتزاريلا-خضروات
+فطيرة مشروم=مشروم-موتزاريلا-خضروات
+فطيرة فراخ=فراخ-موتزاريلا-خضروات
+فطيرة بيروني=بيروني-موتزاريلا-خضروات
+فطيرة سلامي=سلامي-موتزاريلا-خضروات
+فطيرة ديك رومي=ديك رومي-موتزاريلا-خضروات
+فطيرة تونة=تونة-موتزاريلا-خضروات
+فطيرة سيط=سيط-موتزاريلا-خضروات
+فطيرة جمبري=جمبري-موتزاريلا-خضروات
+فطيرة سي فود=جمبري-سيط-كابوريا-موتزاريلا-خضروات`,
+7:`مكرونة أربياتا=صوص أحمر-خضار-بشاميل-موتزاريلا
+مكرونة سجق=سجق-صوص أحمر-بشاميل-موتزاريلا
+مكرونة لحمة=مفروم-صوص أحمر-بشاميل-موتزاريلا
+مكرونة سوسيس=سوسيس-صوص أحمر-بشاميل-موتزاريلا
+مكرونة بسطرمة=بسطرمة-صوص أحمر-بشاميل-موتزاريلا
+مكرونة ميكس لحوم=مفروم-سجق-سوسيس-صوص أحمر-بشاميل-موتزاريلا
+مكرونة تشيكن=فراخ-صوص أحمر-بشاميل-موتزاريلا
+مكرونة فاهيتا=فراخ-خضار-صوص أحمر-بشاميل-موتزاريلا
+مكرونة مشروم=مشروم-صوص أحمر-بشاميل-موتزاريلا
+مكرونة فراخ صوص أبيض=فراخ-صوص أبيض-موتزاريلا
+مكرونة مشكل جبن=شيدر-رومي-بشاميل-موتزاريلا
+مكرونة ديك رومي مدخن=ديك رومي مدخن-صوص أحمر-بشاميل-موتزاريلا
+مكرونة مشروم صوص أبيض=مشروم-صوص أبيض-موتزاريلا
+مكرونة تونة=تونة-صوص أحمر-بشاميل-موتزاريلا
+مكرونة سيط=سيط-صوص أحمر-بشاميل-موتزاريلا
+مكرونة جمبري=جمبري-صوص أحمر-بشاميل-موتزاريلا
+مكرونة سي فود=جمبري-سيط-كابوريا-صوص أحمر-بشاميل-موتزاريلا`};
+const ING={};for(const c in RAW){ING[c]={};RAW[c].split('\n').forEach(l=>{const[a,b]=l.split('=');ING[c][a]=b})}
+const D=C.map((c,ci)=>({n:c.n,items:c.r.split('\n').map((ln,ii)=>{const p=ln.split('|');let nw=p[0].endsWith('*');return{name:p[0].replace('*',''),nw,d:(ING[ci]||{})[p[0].replace('*','')]||'',v:p.slice(1).map((x,k)=>x==='-'?null:{k:ci+'.'+ii+'.'+k,lb:c.l[k],p:+x}).filter(Boolean)}})}));
+const cart={};let cat=-1,q='';
+const $=id=>document.getElementById(id);
+function tabs(){$('tabs').innerHTML=[{n:'الكل'}].concat(D).map((c,i)=>`<button class="tab ${cat===i-1?'on':''}" onclick="setCat(${i-1})">${c.n}</button>`).join('')}
+function setCat(i){cat=i;tabs();render();scrollTo({top:0,behavior:'smooth'})}
+function ctl(v,nm){const e=cart[v.k];const a=JSON.stringify(nm).replace(/"/g,'&quot;');return e?`<div class="q"><button onclick="chg('${v.k}',-1)">−</button><i>${e.q}</i><button class="p" onclick="chg('${v.k}',1)">+</button></div>`:`<button class="add" onclick="add('${v.k}',${a},'${v.lb}',${v.p})">إضافة للسلة</button>`}
+function render(){let h='';D.forEach((c,ci)=>{if(cat>=0&&cat!==ci)return;const its=c.items.filter(i=>!q||(i.name+c.n).includes(q));if(!its.length)return;h+=`<h2>${c.n}</h2><div class="grid">`+its.map(i=>`<div class="card"><div class="nm">${i.name}${i.nw?'<span class="new">جديد</span>':''}</div>${i.d?'<div class="ds">'+i.d.split('-').map(x=>'<em>'+x+'</em>').join('')+'</div>':''}`+i.v.map(v=>{const one=i.v.length===1;return`<div class="v"><span>${one?'':v.lb}<b>${v.p} ج.م</b></span>${ctl(v,i.name)}</div>`}).join('')+'</div>').join('')+'</div>'});$('m').innerHTML=h||'<div class="em">لا توجد نتائج</div>'}
+function add(k,n,lb,p){cart[k]={n,lb,p,q:1};upd()}
+function chg(k,d){cart[k].q+=d;if(cart[k].q<=0)delete cart[k];upd()}
+function tot(){let n=0,t=0;for(const k in cart){n+=cart[k].q;t+=cart[k].q*cart[k].p}return[n,t]}
+function upd(){const[n,t]=tot();$('fn').textContent=n;$('ft').textContent=t;$('fc').style.display=n?'block':'none';render();if($('ov').classList.contains('on'))drawCart()}
+function drawCart(){const[n,t]=tot();$('ct').textContent=t;if(!n){$('ci').innerHTML='<div class="em">السلة فارغة</div>';return}
+$('ci').innerHTML=Object.keys(cart).map(k=>{const e=cart[k];return`<div class="ci"><div>${e.n}<small>${e.lb==='السعر'?'':e.lb+' – '}${e.p} ج.م × ${e.q} = ${e.p*e.q}</small></div><div class="q"><button onclick="chg('${k}',-1)">−</button><i>${e.q}</i><button class="p" onclick="chg('${k}',1)">+</button></div></div>`}).join('')}
+function openCart(){$('ov').classList.add('on');drawCart()}
+function closeCart(){$('ov').classList.remove('on')}
+$('ov').addEventListener('click',e=>{if(e.target===$('ov'))closeCart()});
+document.querySelectorAll('#seg input').forEach(r=>r.addEventListener('change',()=>{const d=r.value==='d';document.querySelectorAll('#seg label').forEach(l=>l.classList.toggle('on',l.contains(r)&&r.checked));$('fd').style.display=d?'grid':'none';$('fi').style.display=d?'none':'grid'}));
+$('s').addEventListener('input',e=>{q=e.target.value.trim();render()});
+function send(){const[n,t]=tot();if(!n)return alert('السلة فارغة');const d=document.querySelector('input[name=t]:checked').value==='d';
+let nm=$('nm').value.trim(),ph=$('ph').value.trim(),ad=$('ad').value.trim(),tb=$('tb').value.trim();
+if(d&&(!nm||!ad||!ph))return alert('من فضلك اكتب الاسم ورقم الموبايل والعنوان');if(!d&&!tb)return alert('من فضلك اكتب رقم الطاولة');
+let m='🧾 *فاتورة طلب جديد – بيتزا وفطائر دودي*\n━━━━━━━━━━━━━━\n';let i=1;
+for(const k in cart){const e=cart[k];m+=`${i++}. ${e.n}${e.lb==='السعر'?'':' ('+e.lb+')'}\n    ${e.q} × ${e.p} = *${e.q*e.p} ج.م*\n`}
+m+=`━━━━━━━━━━━━━━\n🔢 عدد الأصناف: ${n}\n💰 *الإجمالي: ${t} ج.م*\n━━━━━━━━━━━━━━\n`;
+m+=d?`🛵 *توصيل للمنزل*\n👤 الاسم: ${nm}\n📞 الموبايل: ${ph}\n📍 العنوان: ${ad}\n`:`🍽️ *داخل المطعم*\n🪑 رقم الطاولة: ${tb}\n`;
+const nt=$('nt').value.trim();if(nt)m+=`📝 ملاحظات: ${nt}\n`;
+if(DEMO||!WA){alert('🧪 نسخة تجريبية – لم يُرسل الطلب لأي جهة.\n\nهكذا ستصل الفاتورة على واتساب:\n\n'+m);return}
+window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,'_blank')}
+tabs();render();
+</script>
+</body>
+</html>
